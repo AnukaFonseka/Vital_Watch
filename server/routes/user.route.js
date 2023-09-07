@@ -1,15 +1,15 @@
 const express = require("express");
 const userController = require("../controller/user.controller")
-const authMiddleware = require("../middleware/AuthMiddleware");
+const authMiddleware = require("../middleware/auth.middleware");
 
 function getUserRoutes(){
     const router = express.Router();
 
     router.use(express.json());
-    router.use(authMiddleware);
+    // router.use(authMiddleware);
 
-    router.post("/registerUser", userController.registerUser)
-    router.post("/login")
+    router.post("/registerUser", authMiddleware, userController.registerUser)
+    router.post("/login", userController.loginUser)
 
     return router
 }
