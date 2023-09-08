@@ -4,6 +4,7 @@ const userRoutes = require("./user.route");
 const patientRoute = require("./patient.route");
 
 function routes() {
+
     const router = express.Router();
     
     router.use("/user", userRoutes);

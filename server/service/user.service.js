@@ -21,6 +21,17 @@ async function createUser(firstName, lastName,email, contactNo,username, hashPas
     }
 }
 
+async function loginUser(username) {
+    try {
+        const user = Users.findOne({ where: { username: username } });
+        return user;
+    } catch (error) {
+        console.error('Error Login In User Service : ',error);
+        throw error;
+    }
+}
+
 module.exports = {
-    createUser
+    createUser, 
+    loginUser
 }
