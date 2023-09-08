@@ -1,17 +1,17 @@
 const express = require("express");
-const userController = require("../controller/user.controller")
+const patientController = require("../controller/patient.controller")
 const authMiddleware = require("../middleware/AuthMiddleware");
 
-function getUserRoutes(){
+function getPatientRoutes(){
     const router = express.Router();
 
     router.use(express.json());
     // router.use(authMiddleware);
 
-    router.post("/registerUser", userController.registerUser);
-    router.post("/login");
+    router.post("/registerPatient", patientController.registerPatient);
+    
 
     return router;
 }
 
-module.exports = getUserRoutes();
+module.exports = getPatientRoutes();
