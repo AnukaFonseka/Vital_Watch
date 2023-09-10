@@ -1,6 +1,6 @@
 const { Patients } = require("../models");
 
-async function registerPatient(hospitalId, firstName, lastName) {
+async function registerPatient(patient) {
 
     try {
         const newPatient = Patients.create(patient);
