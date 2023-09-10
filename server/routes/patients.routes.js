@@ -8,6 +8,8 @@ function getPatientRoutes(){
 
     router.post("/registerPatient", patientController.registerPatient);
 
+    router.get("/getAllPatients", patientController.getAllPatients);
+
     return router;
 }
 

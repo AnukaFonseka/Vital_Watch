@@ -12,6 +12,18 @@ async function registerPatient(patient) {
     
 }
 
+async function getAllPatients(){
+    try {
+        console.log("hey");
+        const listOfPatients = Patients.findAll();
+        return listOfPatients;
+    } catch (error) {
+        console.error('Error getting Patient Service : ',error);
+        throw error;
+    }
+}
+
 module.exports = {
-    registerPatient
+    registerPatient,
+    getAllPatients
 }
