@@ -1,7 +1,7 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-    const Patients = sequelize.define("patients", {
+    const Patients = sequelize.define("Patients", {
       hospitalId: {
         type: DataTypes.STRING,
         allowNull: false,
