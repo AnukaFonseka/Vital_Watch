@@ -10,7 +10,7 @@ async function registerPatient(patient) {
         throw error;
     }
     
-}
+}   
 
 async function getAllPatients(){
     try {

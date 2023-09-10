@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "polsambal123",
+    "password": "Polsambal123",
     "database": "vital_watch",
     "host": "127.0.0.1",
     "dialect": "mysql"
